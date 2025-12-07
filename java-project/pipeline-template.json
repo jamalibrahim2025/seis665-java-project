@@ -1,0 +1,22 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Resources": {
+    "ArtifactBucket": {
+      "Type": "AWS::S3::Bucket",
+      "Properties": {
+        "BucketName": { "Fn::Sub": "${AWS::StackName}-artifacts" }
+      }
+    }
+  }
+}
+aws cloudformation create-stack \
+  --stack-name java-pipeline \
+  --template-body file://pipeline-template.json \
+  --capabilities CAPABILITY_NAMED_IAM
+
+exit
+
+Exit
+
+
+
